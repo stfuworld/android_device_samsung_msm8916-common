@@ -798,7 +798,7 @@ service charger /system/bin/charger
     seclabel u:r:charger:s0
     critical
 
-on class_start:late_start
+on property:dev.bootcomplete=1
     trigger enable-low-power
 
 on property:init.svc.recovery=running
