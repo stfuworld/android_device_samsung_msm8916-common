@@ -62,6 +62,7 @@ LZMA_RAMDISK_TARGETS := recovery
 TARGET_KERNEL_CONFIG := msm8916_sec_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8916
+TARGET_HAS_MEMFD_BACKPORT := true
 
 SELINUX_IGNORE_NEVERALLOWS := true
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
