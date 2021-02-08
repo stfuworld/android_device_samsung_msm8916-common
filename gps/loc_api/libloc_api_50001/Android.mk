@@ -44,21 +44,23 @@ LOCAL_CFLAGS += -DOSS_BUILD
 endif
 
 LOCAL_C_INCLUDES:= \
-    $(TARGET_OUT_HEADERS)/gps.utils \
-    $(TARGET_OUT_HEADERS)/libloc_core \
     $(LOCAL_PATH) \
     $(TARGET_OUT_HEADERS)/libflp
 
-LOCAL_COPY_HEADERS_TO:= libloc_eng/
-LOCAL_COPY_HEADERS:= \
-   LocEngAdapter.h \
-   loc.h \
-   loc_eng.h \
-   loc_eng_xtra.h \
-   loc_eng_ni.h \
-   loc_eng_agps.h \
-   loc_eng_msg.h \
-   loc_eng_log.h
+LOCAL_HEADER_LIBRARIES += \
+    gps_utils_headers \
+    libloc_core_headers
+
+#LOCAL_COPY_HEADERS_TO:= libloc_eng/
+#LOCAL_COPY_HEADERS:= \
+#   LocEngAdapter.h \
+#   loc.h \
+#   loc_eng.h \
+#   loc_eng_xtra.h \
+#   loc_eng_ni.h \
+#   loc_eng_agps.h \
+#   loc_eng_msg.h \
+#   loc_eng_log.h
 
 LOCAL_PRELINK_MODULE := false
 
@@ -106,10 +108,11 @@ ifeq ($(QCPATH),)
 LOCAL_CFLAGS += -DOSS_BUILD
 endif
 
-## Includes
+LOCAL_HEADER_LIBRARIES += \
+    gps_utils_headers \
+    libloc_core_headers
+
 LOCAL_C_INCLUDES:= \
-    $(TARGET_OUT_HEADERS)/gps.utils \
-    $(TARGET_OUT_HEADERS)/libloc_core \
     $(TARGET_OUT_HEADERS)/libflp
 
 LOCAL_PRELINK_MODULE := false
