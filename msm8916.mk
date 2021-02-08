@@ -321,6 +321,7 @@ PRODUCT_PACKAGES += \
     libshim_secril \
     libxml2 \
     macloader \
+    libcutils_shim
 
 # Ramdisk
 PRODUCT_PACKAGES += \

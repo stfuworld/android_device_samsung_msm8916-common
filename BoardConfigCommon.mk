@@ -247,7 +247,9 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libizat_core.so|libshim_gps.so \
     /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
     /system/vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|libbase_shim.so \
-    /system/vendor/lib/libgeofence.so|liblocadapterbase_shim.so
+    /system/vendor/lib/libgeofence.so|liblocadapterbase_shim.so \
+    /system/lib/libsec-ril.so|/vendor/lib/libcutils_shim.so \
+    /system/lib/libsec-ril-dsds.so|/vendor/lib/libcutils_shim.so
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
