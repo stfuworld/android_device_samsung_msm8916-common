@@ -225,9 +225,9 @@ ifeq ($(RECOVERY_VARIANT),twrp)
 endif
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/sepolicy.mk
+include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 
-BOARD_SEPOLICY_DIRS += \
+BOARD_VENDOR_SEPOLICY_DIRS += \
     $(COMMON_PATH)/sepolicy
 
 # Shims
