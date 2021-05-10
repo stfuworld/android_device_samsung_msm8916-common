@@ -2,8 +2,9 @@ LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter j5lte j5ltechn j5nlte j5nltexx j53gxx j5xnlte j5xlte, $(TARGET_DEVICE)),)
 
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
-
+ subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
+ $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
+  
 include $(CLEAR_VARS)
 
 # CMN
